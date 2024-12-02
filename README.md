@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/PX83n--N)
 # NeXtCS Project 01
-### Name0: YOUR NAME HERE
-### Name1: TEAMMATE NAME HERE (delete line if working solo)
+### Name0: Jason Xiao
+### Name1: Checed Ligh
 ---
 
 ### Overview
@@ -17,50 +17,73 @@ This project will be completed in phases. The first phase will be to work on thi
 
 ## Phase 0: Selection, Analysis & Plan
 
-#### Selected Project: CHOOSE WISELY
+#### Selected Project: Breakout/Arknoid
 
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-YOUR ANSWERS HERE
+Projectile ball that bounces.
+Paddle that can be moved across the x-axis
+Blocks that are destroyable when hit
+Score system
+Lose when no projectile ball
+If all blocks are destroyed, regenerate
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-YOUR ANSWERS HERE
+- Various powerups
+- Angle change when hitting paddle
+- Indestructible or High health blocks
+- Randomly regenerated fields
 
 ### Array Usage
 How will you be using arrays in this project?
 
 1D Array:
-- YOUR ANSER HERE
+- Every projectile ball
+- Powerups
 
 2D Array:
-- YOUR ANSWER HERE
+- Array for all the blocks
 
 
 ### Controls
 How will your program be controlled? List all keyboard commands and mouse interactions.
 
 Keyboard Commands:
-- LIST OF COMMANDS HERE
+- ' ' for pause or unpause
+- 'r' for reset
 
 Mouse Control:
-- Mouse movement:
-- Mouse pressed:
+- Mouse movement: Move the paddle only on the x-axis
+- Mouse pressed: Start game
 
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
 
-CLASS NAME0
+CLASS Projectiles
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - PVector Velocity
+  - Size
+  - int type
+  - color
+  - PVector Position
 - METHODS
-  - LIST METHODS HERE
+  - void display();
+  - boolean checkCollision_block();
+  - float checkCollision_paddle();
+  - void move();
 
-CLASS NAME1
+CLASS Blocks
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - Color color
+  - int type
+  - int tlx
+  - int tly
+  - float powerUp chance
 - METHODS
-  - LIST METHODS HERE
+  - void Display();
+
+CLASS Powerups

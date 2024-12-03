@@ -22,12 +22,12 @@ This project will be completed in phases. The first phase will be to work on thi
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-Projectile ball that bounces.
-Paddle that can be moved across the x-axis
-Blocks that are destroyable when hit
-Score system
-Lose when no projectile ball
-If all blocks are destroyed, regenerate
+- Projectile ball that bounces.
+- Paddle that can be moved across the x-axis
+- Blocks that are destroyable when hit
+- Score system
+- Lose when no projectile ball
+- If all blocks are destroyed, regenerate
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.

@@ -87,3 +87,13 @@ CLASS Blocks
   - void Display();
 
 CLASS Powerups
+- Instance variables:
+  - int type
+  - Color color
+  - int speed
+  - int size
+- METHODS
+  - void display();
+  - void move();
+  - void doPowerUp();
+  - boolean checkCollision_paddle();

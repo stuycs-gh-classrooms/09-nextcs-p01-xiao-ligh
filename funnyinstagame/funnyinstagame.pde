@@ -7,7 +7,7 @@ NextCS P01
 //gameplay variables
 boolean playing;
 float gameSpeed;
-int maxProjectiles;
+int maxProjectiles, maxPowerups;
 
 //Arrays
 Projectile[] projectiles;
@@ -15,7 +15,7 @@ Powerup[] powerups;
 Block[][] blocks;
 
 //Sizing + Display
-int numRows, numCols, bottom, bWidth, bHeight;//for block display
+int numRows, numCols, bottom, bSize;//for block display
 int prSize, pwrSize;//sizing for projectiles and powerups
 
 void setup(){
@@ -24,6 +24,9 @@ void setup(){
   gameSpeed = 1;
   maxProjectiles = 250;
   projectiles = new Projectile[maxProjectiles];
+  powerups = new Powerup[maxPowerups];
+  bottom = 650;
+  bSize = 10;
 }//setup
 
 void draw(){

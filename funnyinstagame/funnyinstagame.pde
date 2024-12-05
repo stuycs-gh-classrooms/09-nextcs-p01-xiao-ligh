@@ -17,6 +17,7 @@ Block[][] blocks;
 //Sizing + Display
 int numRows, numCols, bottom, bSize;//for block display
 int prSize, pwrSize;//sizing for projectiles and powerups
+int bsize;
 
 void setup() {
   size(1000, 750);
@@ -24,6 +25,7 @@ void setup() {
   gameSpeed = 1;
   maxProjectiles = 250;
   projectiles = new Projectile[maxProjectiles];
+<<<<<<< HEAD
   powerups = new Powerup[maxPowerups];
   bottom = 650;
   bSize = 10;
@@ -31,6 +33,9 @@ void setup() {
   numCols = width / bSize;
   blocks = new Block[numRows][numCols];
   drawScreen();
+=======
+  bsize = 40;
+>>>>>>> 0d28bae (a')
 }//setup
 
 void draw() {

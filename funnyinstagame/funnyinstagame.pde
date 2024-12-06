@@ -17,7 +17,8 @@ Block[][] blocks;
 //Sizing + Display
 int numRows, numCols, bottom, bSize;//for block display
 int prSize, pwrSize;//sizing for projectiles and powerups
-int bsize;
+int bsize;//for projectile
+int paddleX, paddleY, paddleL, paddleW;//for paddle display
 
 void setup() {
   size(1000, 750);
@@ -25,7 +26,6 @@ void setup() {
   gameSpeed = 1;
   maxProjectiles = 250;
   projectiles = new Projectile[maxProjectiles];
-<<<<<<< HEAD
   powerups = new Powerup[maxPowerups];
   bottom = 650;
   bSize = 10;
@@ -33,9 +33,7 @@ void setup() {
   numCols = width / bSize;
   blocks = new Block[numRows][numCols];
   drawScreen();
-=======
   bsize = 40;
->>>>>>> 0d28bae (a')
 }//setup
 
 void draw() {
@@ -62,12 +60,14 @@ void drawScreen() {
       projectiles[i].display();
     }//check if there is an object at the index
   }//loop through projectile array to display them
-
+  
+/*
   for (int i = 0; i < maxPowerups; i++) {
     if (projectiles[i] != null) {
       powerups[i].display();
     }//check if there is an object at the index
   }//loop through powerups array to display them
+  */ //for when we add powerups
 }//updateScreen
 
 void newGame(){

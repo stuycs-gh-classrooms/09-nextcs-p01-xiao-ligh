@@ -14,7 +14,7 @@ class Projectile{
     if(ball.x > width - bsize/2 || ball.x < bsize/2) {
       velocity.x *= -1;
     }//move velocity.x
-    if(ball.y > height - bsize/2 || ball.y == paddle.x && ball.y == paddle.y) {
+    if(ball.y > height - bsize/2) {
       velocity.y *= -1;
     }//move velocity.y
     ball.x += velocity.x;
@@ -23,10 +23,12 @@ class Projectile{
   
   void display() {
     circle(ball.x, ball.y, bsize);
-  }
+  }//display()
   
-  //float checkCollision_paddle() {
-    
-  //}
+  void checkCollision_paddle() {
+    if(ball.x > paddleX && ball.y + size > paddleY && ball.x < paddleX + paddleL) {
+      velocity.y *= -1;
+    }//if statement
+  }//checkCollision
   
 }//class Projectile

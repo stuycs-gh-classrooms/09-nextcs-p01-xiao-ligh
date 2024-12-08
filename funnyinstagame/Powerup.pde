@@ -1,3 +1,2 @@
-class Powerup{
-
+class Powerup {
 }//class Powerup

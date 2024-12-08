@@ -1,20 +1,18 @@
-class Block{
+class Block {
   PVector center;
   int bsize;
+  boolean exposed;
 
-   //default constructor
-   Block(PVector p, int s) {
-     bsize = s;
-     center = new PVector(p.x, p.y);
-   }
-
-  boolean collisionCheck(Block other) {
-    return ( this.center.dist(other.center)
-             <= (this.bsize/2 + other.bsize/2) );
-  }//collisionCheck
-
+  //default constructor
+  Block(int TLx, int TLy, int s) {
+    bsize = s;
+    center = new PVector(TLx + s / 2, TLy + s / 2);
+  }
+  
   //visual behavior
   void display() {
+    rectMode(CENTER);
+    fill(255, 255, 0);
     square(center.x, center.y, bsize);
   }//display
 }//class Block

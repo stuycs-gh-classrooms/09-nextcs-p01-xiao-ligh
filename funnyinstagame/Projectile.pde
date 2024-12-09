@@ -29,9 +29,9 @@ class Projectile {
   for (int r = 0; r < numRows; r++) {
     for (int c = 0; c < numCols; c++) {
       Block block = blocks[r][c];
-      if (block.exposed) {
+      if (block.exists) {
         if (position.x >= block.center.x - block.bsize / 2 && position.x <= block.center.x + block.bsize / 2 && position.y >= block.center.y - block.bsize / 2 && position.y <= block.center.y + block.bsize / 2) {
-          block.exposed = false;
+          block.exists = false;
           velocity.y *= -1;
           return;
         }//remove block and change direction if statement
@@ -41,8 +41,31 @@ class Projectile {
 }//checkCollision_blocks
   
   void checkCollision_paddle() {
-    if (position.x > paddleX - paddleW / 2 && position.y + size/2 >= paddleY - paddleH/2 && position.x < paddleX + paddleW / 2) {
+    if (position.x >= paddleX - paddleW / 2 && position.x <= paddleX + paddleW / 2 && position.y + size/2 >= paddleY - paddleH/2 && position.y - size/2 >= paddleY - paddleH/2) {
       velocity.y *= -1;
     }//if statement
   }//checkCollision
+  
+  
+  /*
+    checks collisions for a projectile and rectangle generally, and returns the edge or corner that was hit.
+    Used for both paddle and block collisions
+    
+   1--------2--------3
+   |                 |
+   |                 |
+   8                 4
+   |                 |
+   |                 |
+   7--------6--------5
+   
+   0 represents not hit
+  */
+  
+  int checkCollision(){
+    int hitpart;
+    
+    return hitPart;
+  }//
+  
 }//class Projectile

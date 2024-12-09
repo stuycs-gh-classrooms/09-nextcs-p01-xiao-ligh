@@ -53,6 +53,7 @@ void gameUpdate() {
     if (projectiles[i] != null) {
       projectiles[i].move();
       projectiles[i].checkCollision_paddle();
+      projectiles[i].checkCollision_blocks();
     }//check if object at index
   }//update projectile position
 }//gameUpdate
